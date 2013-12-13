@@ -17,4 +17,14 @@
         <item>Maserati MC12 Corsa</item>
         <item>Pagani Zonda Cinque</item>
     </string-array>
+    <string-array name = "licensePlates">
+        <item>АА5289ЛЩ</item>
+        <item>АА5782ПР</item>
+        <item>АА8821ЕГ</item>
+        <item>АА1229ТО</item>
+        <item>АА0029ДЗ</item>
+        <item>АА5462ТУ</item>
+        <item>АА9917ИТ</item>
+        <item>АА0000ГЙ</item>
+    </string-array>
 </resources>

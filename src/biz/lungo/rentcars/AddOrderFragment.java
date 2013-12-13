@@ -7,18 +7,21 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
-public class AddOrderFragment extends FrontFragment implements OnTouchListener {	
+public class AddOrderFragment extends FrontFragment implements OnTouchListener, OnClickListener {	
 	private static final int START = 0;
 	private static final int END = 1;
 	EditText fieldName, fieldDateStart, fieldDateEnd;
+	Button buttonAdd;
 	Spinner spinnerCars;
 	private String result;
 	DatePicker dp;
@@ -45,24 +48,22 @@ public class AddOrderFragment extends FrontFragment implements OnTouchListener {
 		fieldDateEnd.setClickable(true);
 		fieldDateEnd.setInputType(InputType.TYPE_NULL);
 		fieldDateEnd.setOnTouchListener(this);
+		buttonAdd = (Button) rl.findViewById(R.id.buttonAdd);
+		buttonAdd.setOnClickListener(this);
 		adapter = ArrayAdapter.createFromResource(getActivity(), R.array.cars, android.R.layout.simple_spinner_dropdown_item);
-		spinnerCars.setAdapter(adapter);	
+		spinnerCars.setAdapter(adapter);
 		return rl;
 	}
-
-
-	
-
 
 	@Override
 	public boolean onTouch(View v, MotionEvent e) {
 		if (e.getAction() == MotionEvent.ACTION_DOWN){
 			switch (v.getId()){
 			case R.id.editTextDateStart:
-				showDateDialog(START, "Выберите дату начала аренды");
+				showDateDialog(START, "Р’С‹Р±РµСЂРёС‚Рµ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° Р°СЂРµРЅРґС‹");
 				break;
 			case R.id.editTextDateEnd:
-				showDateDialog(END, "Выберите дату окончания аренды");
+				showDateDialog(END, "Р’С‹Р±РµСЂРёС‚Рµ РґР°С‚Сѓ РѕРєРѕРЅС‡Р°РЅРёСЏ Р°СЂРµРЅРґС‹");
 				break;
 			}
 		}
@@ -92,6 +93,13 @@ public class AddOrderFragment extends FrontFragment implements OnTouchListener {
 		});
 		ab.setNegativeButton(android.R.string.cancel, null);
 		ab.show();
+	}
+
+
+	@Override
+	public void onClick(View v) {
+		String selectedCarModel = MainActivity.db.execSQL(sql)
+		String queryAdd = "INSERT INTO orders(_car_model, _license_plate, _client_name, _start_date, _end_date, _is_vip) VALUES('" + spinnerCars.getSelectedItemPosition();
 	}
 
 }
