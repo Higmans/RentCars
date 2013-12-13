@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_items">
+        <item>Добавить запись</item>
+        <item>Просмотреть записи</item>
+        <item>Удалить запись</item>
+        <item>Добавить автомобиль</item>
+        <item>Удалить автомобиль</item>
+    </string-array>
+    <string-array name = "cars">
+        <item>Maybach Exelero</item>
+        <item>Mercedes-Benz CLK GTR AMG</item>
+        <item>Ferrari P4/5 Pininfarina</item>
+        <item>Bugatti Veyron 16.4</item>
+        <item>McLaren F1 LM</item>
+        <item>Ferrari FXX Evolution</item>
+        <item>Maserati MC12 Corsa</item>
+        <item>Pagani Zonda Cinque</item>
+    </string-array>
+</resources>
