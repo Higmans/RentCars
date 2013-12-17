@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">CarRent app</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_title">Аренда автомобилей</string>
+    <string name="hello_world">Hello World</string>
     <string name="action_settings">Settings</string>
+    <string name="calendar_start">Выберите дату начала аренды</string>
+    <string name="calendar_end">Дата окончания аренды</string>
 
 </resources>

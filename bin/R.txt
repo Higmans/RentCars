@@ -59,9 +59,12 @@ int layout menu_frame 0x7f030004
 int layout row 0x7f030005
 int layout slidingmenumain 0x7f030006
 int menu main 0x7f090000
-int string action_settings 0x7f070002
+int string action_settings 0x7f070003
 int string app_name 0x7f070000
-int string hello_world 0x7f070001
+int string app_title 0x7f070001
+int string calendar_end 0x7f070005
+int string calendar_start 0x7f070004
+int string hello_world 0x7f070002
 int style AppBaseTheme 0x7f080001
 int style AppTheme 0x7f080000
 int[] styleable SlidingMenu { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d }

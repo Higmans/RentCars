@@ -25,12 +25,12 @@ public class MainActivity extends BaseActivity {
         if (mContent == null)
             mContent = new AddOrderFragment(android.R.color.white, R.layout.add_order_frame);
         new Thread(new Runnable() {
-			
 			@Override
 			public void run() {
 				dbInit();	
 			}
 		}).run();
+        
         setContentView(R.layout.content_frame);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -57,9 +57,8 @@ public class MainActivity extends BaseActivity {
     	for (int i = 0; i < carModels.length; i++){
     		String query = "INSERT INTO cars (_model, _license_plate) VALUES(" + "'" + carModels[i] + "', '" + carLicensePlates[i] + "');";
     		db.execSQL(query);
-    		//getDBcontent();
     	}
-    	
+		//getDBcontent();
 	}
 
 	private void getDBcontent() {
@@ -72,7 +71,7 @@ public class MainActivity extends BaseActivity {
 				for (int i = 0; i < columns; i++){
 					sb.append(c.getString(i) + " ");
 				}
-				sb.append("\n"); 
+				sb.append("\n");
 				c.moveToNext();
 			}
 		}
@@ -97,6 +96,8 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
     	String dropQuery = "DROP TABLE IF EXISTS cars;";
     	db.execSQL(dropQuery);
+    	String dropQuery1 = "DROP TABLE IF EXISTS orders;";
+    	db.execSQL(dropQuery1);
     	super.onDestroy();
     }
 

@@ -20,7 +20,7 @@ public class BaseActivity extends SlidingFragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
-        setTitle("Аренда автомобилей");
+        setTitle(getResources().getString(R.string.app_title));
         setBehindContentView(R.layout.menu_frame);
         SlidingMenu sm = getSlidingMenu();
         sm.setShadowWidthRes(R.dimen.shadow_width);
