@@ -127,8 +127,8 @@ public class AddOrderFragment extends FrontFragment implements OnTouchListener, 
 	public void onClick(View v) {
 		String carModel = spinnerCars.getSelectedItem().toString();
 		Cursor cursor = MainActivity.db.rawQuery("SELECT * FROM cars WHERE _model = '" + carModel + "';", null);
-		//String carLicensePlate = cursor.getString(2);
-		String carLicensePlate = "FFF";
+		cursor.moveToFirst();
+		String carLicensePlate = cursor.getString(2);
 		String clientName = fieldName.getText().toString();
 		long startDate = getDate(START);
 		long endDate = getDate(END);
